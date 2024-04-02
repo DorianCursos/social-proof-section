@@ -12,23 +12,23 @@ body {
   max-width: 1440px;
   margin-inline: auto;
   font-family: 'League Spartan', sans-serif;
-  background-image: url(../assets/images/bg-pattern-top-mobile.svg), url(../assets/images/bg-pattern-bottom-mobile.svg);
-  background-repeat: no-repeat;
-  background-position: top, bottom;
 }
 
 @media screen and (width>768px) {
   body {
     padding: 7.375rem 10.3125rem;
-    background-image: url(../assets/images/bg-pattern-top-desktop.svg), url(../assets/images/bg-pattern-bottom-desktop.svg);
-    background-position: top left, bottom right;
   }
+}
+.first-section {
+  display: flex;
+  flex-direction: column;
+  gap: 7.8125rem;
 }
 
 @media screen and (width>768px) {
-  .first-row {
-    display: flex;
-    gap: 7.8125rem;
+  .first-section {
+    flex-direction: row;
+    align-items: center;
   }
 }
 
@@ -94,6 +94,10 @@ body {
     align-items: center;
     gap: 2rem;
   }
+  .second-review {
+    position: relative;
+    left: -50px;
+  }
 }
 
 .review-stars {
@@ -113,6 +117,17 @@ body {
   font-size: 1.0625rem;
   font-weight: 700;
   color: #512051;
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (width>768px) {
+  .testimonials {
+    flex-direction: row;
+  }
 }
 
 .testimonial-card {
